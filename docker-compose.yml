@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  phalcon-app:
+    container_name: phalcon-app
+    build: .
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - '8080:80'
+    expose:
+      - '8080'
+    depends_on:
+      - phalcon-mysql
+    networks:
+      - mysql-phalcon-network
+
+  phalcon-mysql:
+    image: mysql:8
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: phalcon_app
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - '3306:3306'
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - mysql-phalcon-network
+
+networks: 
+  mysql-phalcon-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local
+
+  

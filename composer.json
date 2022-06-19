@@ -1,0 +1,17 @@
+{
+    "name": "phalcon/docker",
+    "autoload": {
+        "psr-4": {
+            "Phalcon\\Docker\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Paulo Roberto Bolsanello",
+            "email": "paulo.bolsanello@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phalcon/devtools": "^3.4"
+    }
+}
