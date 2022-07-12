@@ -19,6 +19,5 @@ return array(
     'Psy\\' => array($vendorDir . '/psy/psysh/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
-    'Phalcon\\Docker\\' => array($baseDir . '/src'),
     'Phalcon\\' => array($vendorDir . '/phalcon/devtools/scripts/Phalcon'),
 );

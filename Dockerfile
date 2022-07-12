@@ -24,12 +24,24 @@ RUN set -xe && \
     && \
     php -m
 
+RUN  curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer 
+ 
 #RUN composer require --dev phalcon/devtools
-#CMD bash -c "composer require --dev phalcon/devtools && vendor/bin/phalcon project app simple"
 
 #RUN vendor/bin/phalcon project app simple
 
-
 ENV WEB_DOCUMENT_ROOT=/var/www/html/app/public
+
+RUN chown -R root:www-data /app
+RUN chmod u+rwx,g+rx,o+rx /app
+RUN find /app -type d -exec chmod u+rwx,g+rx,o+rx {} +
+RUN find /app -type f -exec chmod u+rw,g+rw,o+r {} +
+
+#RUN usermod -u 1000 www-data
+
+EXPOSE 9000
+
+
+
 
 

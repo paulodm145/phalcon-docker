@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit04b87b4a896aa814199d76f27ad6bb76
+class ComposerStaticInitba79efef325e6c355e6f9261eac3d2b2
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -38,7 +38,6 @@ class ComposerStaticInit04b87b4a896aa814199d76f27ad6bb76
             'Psy\\' => 4,
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
-            'Phalcon\\Docker\\' => 15,
             'Phalcon\\' => 8,
         ),
     );
@@ -96,10 +95,6 @@ class ComposerStaticInit04b87b4a896aa814199d76f27ad6bb76
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
-        'Phalcon\\Docker\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
         'Phalcon\\' => 
         array (
             0 => __DIR__ . '/..' . '/phalcon/devtools/scripts/Phalcon',
@@ -120,9 +115,9 @@ class ComposerStaticInit04b87b4a896aa814199d76f27ad6bb76
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit04b87b4a896aa814199d76f27ad6bb76::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit04b87b4a896aa814199d76f27ad6bb76::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit04b87b4a896aa814199d76f27ad6bb76::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitba79efef325e6c355e6f9261eac3d2b2::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitba79efef325e6c355e6f9261eac3d2b2::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitba79efef325e6c355e6f9261eac3d2b2::$classMap;
 
         }, null, ClassLoader::class);
     }

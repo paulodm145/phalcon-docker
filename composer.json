@@ -1,14 +1,10 @@
 {
-    "name": "phalcon/docker",
-    "autoload": {
-        "psr-4": {
-            "Phalcon\\Docker\\": "src/"
-        }
-    },
+    "name": "paulo/docker-phalcon",
+    "description": "Container com Phalcon 3.4, mysql e NGINX",
     "authors": [
         {
-            "name": "Paulo Roberto Bolsanello",
-            "email": "paulo.bolsanello@gmail.com"
+            "name": "Paulo R. Bolsanello",
+            "email": "pr2desenvolvimento@gmail.com"
         }
     ],
     "require-dev": {
